@@ -1,6 +1,8 @@
 # docker-postfix
 Simple Postfix SMTP TLS relay [docker](http://www.docker.com) image with no local authentication enabled (to be run in a secure LAN). 
 
+Based on [juanluisbaptiste/docker-postfix](https://github.com/juanluisbaptiste/docker-postfix).
+
 ### Build instructions
 
 Clone this repo and then:
