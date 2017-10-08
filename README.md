@@ -12,7 +12,7 @@ Clone this repo and then:
 
 You can also find a prebuilt docker image from [Docker Hub](https://registry.hub.docker.com/u/juanluisbaptiste/postfix/), which can be pulled with this command:
 
-    sudo docker pull juanluisbaptiste/postfix:latest
+    sudo docker pull j3br/postfix:latest
 
 ### How to run it
 
