@@ -19,6 +19,8 @@ echo "smtp_use_tls=yes" >> /etc/postfix/main.cf
 echo "smtp_sasl_auth_enable = yes" >> /etc/postfix/main.cf
 echo "smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd" >> /etc/postfix/main.cf
 echo "smtp_sasl_security_options = noanonymous" >> /etc/postfix/main.cf
+echo "smtpd_upstream_proxy_protocol = haproxy" >> /etc/postfix/main.cf
+echo "smtpd_upstream_proxy_timeout = 50s" >> /etc/postfix/main.cf
 
 echo "[$SMTP_SERVER]:587 $SMTP_USERNAME:$SMTP_PASSWORD" >> /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
