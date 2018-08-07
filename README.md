@@ -52,4 +52,4 @@ Also take into account that email `From:` header will contain the email address 
 authenticate against the Gmail SMTP server(SMTP_USERNAME), the one on the email will be ignored by Gmail.
 
 ### Debugging
-If you need troubleshooting the container you can set the environment variable _DEBUG=yes_ for a more verbose output.
+If you need to troubleshoot the container you can set the environment variable _DEBUG=yes_ for a more verbose output.
