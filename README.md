@@ -19,6 +19,7 @@ You can also find a prebuilt docker image from [Docker Hub](https://hub.docker.c
 The following env variables need to be passed to the container:
 
 * `SMTP_SERVER` Server address of the SMTP server to use.
+* `SMTP_PORT` (Optional, Default value: 587) Port of the SMTP server to use.
 * `SMTP_USERNAME` Username to authenticate with.
 * `SMTP_PASSWORD` Password of the SMTP user.
 * `SERVER_HOSTNAME` Server hostname for the Postfix container. Emails will appear to come from the hostname's domain.
