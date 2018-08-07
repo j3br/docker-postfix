@@ -37,7 +37,11 @@ add_config_value "smtp_sasl_password_maps" "hash:\/etc\/postfix\/sasl_passwd"
 add_config_value "smtp_sasl_security_options" "noanonymous"
 add_config_value "smtpd_upstream_proxy_protocol" "haproxy"
 add_config_value "smtpd_upstream_proxy_timeout" "50s"
-add_config_value "mynetworks" "${RELAY_NETWORKS}"
+# The sed regex in add_config_value() doesn't like the RELAY_NETWORKS and nothing gets added to the config file.
+#add_config_value "mynetworks" "${RELAY_NETWORKS}"
+
+# Adding allowed relay networks the old fashioned way for now
+echo "mynetworks = $RELAY_NETWORKS" >> /etc/postfix/main.cf
 
 # Create sasl_passwd file with auth credentials
 if [ ! -f /etc/postfix/sasl_passwd ]; then
